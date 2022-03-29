@@ -1,19 +1,81 @@
 <?php
 
-class Caneta
-{
-    public $modelo;
-    private $ponta;
-    public function  getModelo(){
-        return $this->modelo;
+class ContaBnaco{
+
+    public $numConta;
+    protected $tipo;
+    private $dono;
+    private $saldo;
+    private $status;
+
+    public function  abrirConta($t){
+        $this->setTipo($t);
+        $this->setStatus(true);
+        if ($t == "CC"){
+            $this->setSaldo(50);
+        }elseif ($t == "CP"){
+            $this->saldo(150);
+        }
     }
-    public function setModelo($m){
+    public function fecharConta($m){
         $this->modelo = $m;
     }
-    public function getPonta() {
+    public function depositar() {
         return $this->ponta;
     }
-    public function setPonta($P){
+    public function sacar($P){
         $this->ponta = $p;
+    }
+   public function pagarMensal(){
+        return $this->pagarMensal;
+    }
+    public function __construct(){
+
+    }
+
+    function getNumConta(){
+        return $this->numConta;
+    }
+    function setNumConta($n){
+        $this->numConta = $n;
+    }
+
+    function getTipo($tipo)
+    {
+        $this->tipo=$tipo;
+    }
+
+    function setTipo($tipo)
+    {
+        $this->tipo=$tipo;
+    }
+
+    function getDono($dono)
+    {
+        $this->tipo=$dono;
+    }
+
+    function setDono($dono)
+    {
+        $this->tipo=$dono;
+    }
+
+    function getSaldo($saldo)
+    {
+        $this->tipo=$saldo;
+    }
+
+    function setSaldo($saldo)
+    {
+        $this->tipo=$saldo;
+    }
+    function getSatatus($status)
+    {
+        $this->tipo=$status;
+    }
+
+    function setStatus($status)
+    {
+        $this->tipo=$status;
     }
 }
