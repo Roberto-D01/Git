@@ -17,18 +17,28 @@ class ContaBnaco{
             $this->saldo(150);
         }
     }
-    public function fecharConta($m){
-        $this->modelo = $m;
+    public function fecharConta(){
+        if ($this->getSaldo()>0){
+            echo "<p>Conta ainda tem dinheiro,não podemos fechá-la!</p>";
+        }elseif ($this->getSaldo()<0){
+            echo "<p>conta está em débito.Impossivel encerra-la!</p>";
+        }else{
+            $this->setStatus(false);
+        }
     }
+
     public function depositar() {
         return $this->ponta;
     }
+
     public function sacar($P){
         $this->ponta = $p;
     }
+
    public function pagarMensal(){
         return $this->pagarMensal;
     }
+
     public function __construct(){
 
     }
