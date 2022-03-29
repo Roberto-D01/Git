@@ -6,7 +6,7 @@
     </head>
     <body>
         <?php
-            require_once 'caneta.php';
+            require_once 'ContaBanco.php';
 
             $c1 = new Caneta("BIC","Azul", 0.5);
 
