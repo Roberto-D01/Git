@@ -76,14 +76,14 @@ class ContaBnaco
 
     }
 
-    function getNumConta()
+    function getNumConta($numConta)
     {
-        return $this->numConta;
+        return $this->$numConta;
     }
 
-    function setNumConta($n)
+    function setNumConta($numConta)
     {
-        $this->numConta = $n;
+        $this->numConta = $numConta;
     }
 
     function getTipo($tipo)
