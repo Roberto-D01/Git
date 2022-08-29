@@ -6,7 +6,20 @@ fullStackPHPClassName("02.06 - Arrays, vetores e pilhas");
  * [ arrays ] https://php.net/manual/pt_BR/language.types.array.php
  */
 fullStackPHPClassSession("index array", __LINE__);
+$arrA = ARRAY (1,2,3);
+$ARRa = [0,1,2,3];
 
+var_dump($arrA);
+
+$arrayIndex = [
+    "Brian",
+    "Angus",
+    "Malcom"
+];
+$arrayIndex [] = "Cliff";
+$arrayIndex [] = "Phil";
+
+var_dump($arrayIndex);
 
 /**
  * [ associative array ] "key" => "value"
