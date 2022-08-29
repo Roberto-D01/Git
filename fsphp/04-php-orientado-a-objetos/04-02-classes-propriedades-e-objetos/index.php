@@ -7,11 +7,23 @@ fullStackPHPClassName("04.02 - Classes, propriedades e objetos");
  */
 fullStackPHPClassSession("classe e objeto", __LINE__);
 
+require __DIR__."/classes/User.php";
+ 
+$user = new User();
+var_dump($user);
 
 /*
  * [ propriedades ] http://php.net/manual/pt_BR/language.oop5.properties.php
  */
 fullStackPHPClassSession("propriedades", __LINE__);
+
+$user->firstName = "Roberto";
+$user->lastName = "Carlos";
+$user->email = "rj@hotmail.com";
+
+var_dump($user);
+echo "<p> O email de {$user ->firstName} é {$user->email} ! </p>";
+
 
 
 /*
